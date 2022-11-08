@@ -45,7 +45,7 @@ const Login = () => {
                    
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <div className="card-body w-96">
+                    <div className="card-body w-full">
                     <div className="form-control">
                         <label className="label">
                         <span className="label-text">Email</span>
