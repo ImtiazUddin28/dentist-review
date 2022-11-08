@@ -1,9 +1,12 @@
 import React from 'react';
+import Appointment from '../Appointment/Appointment';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
     return (
-        <div>
-            <h2>Home page is running</h2>
+        <div className='m-8'>
+            <Banner></Banner>
+            <Appointment></Appointment>
         </div>
     );
 };
