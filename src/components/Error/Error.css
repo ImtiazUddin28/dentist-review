@@ -1,0 +1,12 @@
+.error_container{
+    text-align: center;
+}
+.error_container h1{
+    color: orange;
+}
+.error_container h2{
+    color: orangered
+}
+.error_container h3{
+    color: olivedrab
+}
