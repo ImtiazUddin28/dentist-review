@@ -44,7 +44,7 @@ const Appointment = () => {
                     </div>
                 </div>
                 <div className="form-control mt-6">
-                <button className="btn btn-primary">Book Your Appointment</button>
+                <button className="btn bg-cyan-500">Book Your Appointment</button>
                 </div>
             </div>
         </div>

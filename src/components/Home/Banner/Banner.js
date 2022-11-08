@@ -9,7 +9,7 @@ const Banner = () => {
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold text-cyan-500 ">Let Us Brighten Your Smile</h1>
       <p className="mb-5 ">A smile is your unique accessory and pearly white teeth make it even more beautiful. If you want to keep the aching tooth away and want to keep those pearly whites intact, taking good care of your teeth is a must.</p>
-      <Link to='/services' className="btn btn-primary">Get Service</Link>
+      <Link to='/services' className="btn bg-cyan-500">Get Service</Link>
     </div>
   </div>
 </div>
