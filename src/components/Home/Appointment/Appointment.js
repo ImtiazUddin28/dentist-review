@@ -6,7 +6,7 @@ import imgtwo from '../../../assets/images/dentist-man.jpg'
 const Appointment = () => {
     const [startDate, setStartDate] = useState(new Date());
     return (
-        <div className="flex bg-base-200 my-6">
+        <div className="flex flex-col lg:flex-row bg-base-200 my-6">
             <div className="">
                 <img src={imgtwo} className="border-r-4" alt='' />
             </div>
