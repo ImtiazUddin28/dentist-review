@@ -30,6 +30,7 @@ const Header = () => {
                                         <li><Link to='/addservice'>Add Service</Link></li>
                                         <li><Link to='/myreviews'>My Review</Link></li>
                                         <li><Link to='/blogs'>Blogs</Link></li>
+                                        <li><Link to='/login'>Login</Link></li>
                                         <li><Link onClick={handleLogOut}>Log Out</Link></li> 
                                         
                                     </>
@@ -67,6 +68,7 @@ const Header = () => {
                                         <li><Link to='/addservice'>Add Service</Link></li>
                                         <li><Link to='/myreviews'>My Review</Link></li>
                                         <li><Link to='/blogs'>Blogs</Link></li>
+                                        <li><Link to='/login'>Login</Link></li>
                                         <li><Link onClick={handleLogOut}>Log Out</Link></li> 
                                         
                                     </>
@@ -104,7 +106,7 @@ const Header = () => {
                         <Link to="/profile">
                             {user?.photoURL ?
                                 <img
-                                    style={{ height: '30px' }}
+                                    style={{ height: '30px', borderRadius: '50%' }}
                                     src={user?.photoURL}
                                     alt="user pic">
                                 </img>

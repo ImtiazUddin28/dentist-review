@@ -31,12 +31,12 @@ const Appointment = () => {
                     <div style={{width: '50%'}}>
                         <select className="select select-info flex w-full max-w-xs">
                         <option disabled selected>Select Your Service</option>
-                        <option>English</option>
-                        <option>Japanese</option>
-                        <option>Italian</option>
-                        <option>English</option>
-                        <option>Japanese</option>
-                        <option>Italian</option>
+                        <option>Whitening</option>
+                        <option>Braces</option>
+                        <option>Surgery</option>
+                        <option>Implants</option>
+                        <option>Prosthesis</option>
+                        <option>Alignment</option>
                         </select>
                     </div>
                     <div style={{width: '50%'}}>

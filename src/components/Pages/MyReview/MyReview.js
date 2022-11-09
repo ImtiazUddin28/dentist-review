@@ -1,9 +1,10 @@
 import React from 'react';
+import Review from './Review';
 
 const MyReview = () => {
     return (
         <div>
-            <h1>My review page is runnig</h1>
+            <Review></Review>
         </div>
     );
 };
