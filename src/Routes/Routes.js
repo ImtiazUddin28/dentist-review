@@ -5,7 +5,7 @@ import AddService from "../components/Pages/AddService/AddService";
 import Blogs from "../components/Pages/Blogs/Blogs";
 import Login from "../components/Pages/Login/Login";
 import MyReview from "../components/Pages/MyReview/MyReview";
-import ServiceDetails from "../components/Pages/ServiceDetails/ServiceDetails";
+import Service from "../components/Pages/Service/Service";
 import Services from "../components/Pages/Services/Services";
 import SignUp from "../components/Pages/SignUp/SignUp";
 import Main from "../Layout/Main";
@@ -44,9 +44,10 @@ export const routes = createBrowserRouter([
                 loader: () => fetch('https://b610-lerning-platform-server-side-imtiaz-uddin28.vercel.app/course')
             },
             {
-                path: '/service',
-                element: <ServiceDetails></ServiceDetails>,
-                loader: ({params}) => fetch(`https://b610-lerning-platform-server-side-imtiaz-uddin28.vercel.app/course/${params.id}`)
+                path: '/service/:id',
+                element: <Service></Service>,
+                loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+                
             },
             
             
