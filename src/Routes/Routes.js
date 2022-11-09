@@ -41,7 +41,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>,
-                loader: () => fetch('https://b610-lerning-platform-server-side-imtiaz-uddin28.vercel.app/course')
+                
             },
             {
                 path: '/service/:id',
