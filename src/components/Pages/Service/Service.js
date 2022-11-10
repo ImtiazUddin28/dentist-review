@@ -12,7 +12,7 @@ const Service = () => {
     const [reviews, setReviews] = useState([]);
     
     useEffect( () =>{
-        fetch('http://localhost:5000/reviews')
+        fetch('https://dentist-review-server.vercel.app/reviews')
         .then(res =>res.json())
         .then(data => setReviews(data))
     }, []);
@@ -47,7 +47,7 @@ const Service = () => {
 
         // }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://dentist-review-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
