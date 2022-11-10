@@ -1,19 +1,23 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import useTitle from '../../../hooks/useTitle';
 
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
 const Services = () => {
     const [services, setServices] = useState([]);
+    useTitle('Services')
+        useEffect( () =>{
+            fetch('https://dentist-review-server.vercel.app/services')
+            .then(res =>res.json())
+            .then(data => setServices(data))
+        }, []);
     
-    useEffect( () =>{
-        fetch('https://dentist-review-server.vercel.app/services')
-        .then(res =>res.json())
-        .then(data => setServices(data))
-    }, []);
-
+    
+    
     return (
         <div>
+            
             <div className='text-center mb-4'>
                 <h2 className="text-3xl font-semibold mb-3 text-cyan-500">Services To Excellence </h2>
                 
@@ -24,6 +28,7 @@ const Services = () => {
                     services.map(service => <ServiceDetails
                         key={service._id}
                         service={service}
+                     
                     ></ServiceDetails>)
                 }
 

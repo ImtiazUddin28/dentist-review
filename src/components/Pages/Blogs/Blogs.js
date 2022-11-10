@@ -1,6 +1,9 @@
+/* eslint-disable no-undef */
 import React from 'react';
+import useTitle from '../../../hooks/useTitle';
 
 const Blogs = () => {
+    useTitle('Blogs')
     return (
         <div className="m-10">
             <div className="m-10">

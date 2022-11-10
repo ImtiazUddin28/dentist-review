@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -8,6 +9,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    useTitle('Login')
     const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = event => {

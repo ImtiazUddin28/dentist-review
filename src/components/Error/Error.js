@@ -1,6 +1,7 @@
 import React from 'react';
 import './Error.css'
 const Error = () => {
+    
     return (
         <div className='error_container'>
             <h1>404 not found</h1>

@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 
 
 const SignUp = () => {
@@ -10,7 +11,7 @@ const SignUp = () => {
     const [error, setError] = useState('');
    
     const { createUser,providerLogin, updateUserProfile} = useContext(AuthContext);
-
+    
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
@@ -60,7 +61,7 @@ const SignUp = () => {
     
 
     
-
+    useTitle('Sign Up')
     return (
 
     <div  className="hero min-h-screen bg-base-200">

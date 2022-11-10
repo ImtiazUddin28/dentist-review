@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 
 const AddService = () => {
+    useTitle('Add New Service');
     const { user } = useContext(AuthContext);
+   
     const addNewService = event => {
         event.preventDefault();
         const form = event.target;
