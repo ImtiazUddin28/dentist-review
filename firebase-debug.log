@@ -1,0 +1,115 @@
+[debug] [2022-11-10T17:20:37.413Z] ----------------------------------------------------------------------
+[debug] [2022-11-10T17:20:37.416Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Imtiaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-10T17:20:37.417Z] CLI Version:   11.16.0
+[debug] [2022-11-10T17:20:37.417Z] Platform:      win32
+[debug] [2022-11-10T17:20:37.417Z] Node Version:  v16.14.2
+[debug] [2022-11-10T17:20:37.430Z] Time:          Thu Nov 10 2022 23:20:37 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-10T17:20:37.431Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-10T17:20:37.574Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-10T17:20:37.575Z] > authorizing via signed-in user (templateplanet46@gmail.com)
+[debug] [2022-11-10T17:20:37.575Z] [iam] checking project dentist-review for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-10T17:20:37.577Z] > refreshing access token with scopes: []
+[debug] [2022-11-10T17:20:37.580Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-10T17:20:37.580Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-10T17:20:38.124Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-11-10T17:20:38.125Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-10T17:20:38.144Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dentist-review:testIamPermissions [none]
+[debug] [2022-11-10T17:20:38.145Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dentist-review:testIamPermissions x-goog-quota-user=projects/dentist-review
+[debug] [2022-11-10T17:20:38.145Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dentist-review:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-10T17:20:39.912Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dentist-review:testIamPermissions 200
+[debug] [2022-11-10T17:20:39.912Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dentist-review:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-10T17:20:39.916Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dentist-review [none]
+[debug] [2022-11-10T17:20:40.793Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dentist-review 200
+[debug] [2022-11-10T17:20:40.794Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dentist-review {"projectId":"dentist-review","projectNumber":"667682329524","displayName":"dentist-review","name":"projects/dentist-review","resources":{"hostingSite":"dentist-review"},"state":"ACTIVE","etag":"1_34281545-7a4d-44b4-9197-4ff52383fe47"}
+[info] 
+[info] === Deploying to 'dentist-review'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-10T17:20:40.814Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/versions [none]
+[debug] [2022-11-10T17:20:40.815Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-10T17:20:44.243Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/versions 200
+[debug] [2022-11-10T17:20:44.243Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/versions {"name":"projects/667682329524/sites/dentist-review/versions/30f90544667f77a8","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[dentist-review]: beginning deploy... 
+[info] i  hosting[dentist-review]: found 21 files in build 
+[debug] [2022-11-10T17:20:44.294Z] [hosting] uploading with 200 concurrency
+[debug] [2022-11-10T17:20:44.886Z] [hosting] hash cache [YnVpbGQ] stored for 21 files
+[debug] [2022-11-10T17:20:44.887Z] [hosting][hash queue][FINAL] {"max":516,"min":15,"avg":61,"active":0,"complete":21,"success":21,"errored":0,"retried":0,"total":21,"elapsed":538}
+[debug] [2022-11-10T17:20:44.887Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/667682329524/sites/dentist-review/versions/30f90544667f77a8:populateFiles [none]
+[debug] [2022-11-10T17:20:44.887Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/667682329524/sites/dentist-review/versions/30f90544667f77a8:populateFiles {"files":{"/favicon.ico":"1f0c9bb58962d575dfc6b67dae1fa0461190cd06ffbef01c12178020399a5288","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/reviews.json":"46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/services.json":"46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e","/asset-manifest.json":"1e6fa17d482dfaa9756e4e604877dbebaa91cdb8efc41e084d74fb10cbf859ad","/index.html":"34d25c3a9e7e92e59f3391ab2add64e1ed5e0791a7e2649ebb256ffe6d8584af","/static/js/787.0165e74c.chunk.js":"85311c01d42430c571eb24bab3ba86b486218f45f86ead7e9c462552d22f3fd3","/static/js/787.0165e74c.chunk.js.map":"a5ca589504365b1e4c3cfb5c7a4151f4599c50ea7b37cdcb91613c007dc1f060","/static/js/main.98dbbd0f.js.LICENSE.txt":"dc5016d29d45e826ece3d0acae9cce0be7562d2a273dd92025dcc349f37858a0","/static/media/dent.183b7e28772b76d8a9a0.jpg":"cbc66fe2d3286d65520c98ddb05b6353c8b2dedb52252047fc2e2db36c85c2b9","/static/media/dental-logo-3.25c37c92a3c3e0411756.jpg":"e5415d77a79929602fd8800e30ed980fa5d1a67274d7397462d757018ab191bb","/static/css/main.9b58c948.css.map":"ba533cb2453d5304ec9d8552b70f6bb66ed1642d7f6115e961318786d445f743","/static/css/main.9b58c948.css":"1be19d6d3889d421bcf4f4a7a918f9b75989a103c2ee1558c3a24430b635d983","/static/media/dentist-man.8877d6a6de3a4751ade7.jpg":"69d80208e7aa58984b48dc7aee9ff12af1ba3506af445929a972577314aca973","/static/media/treatment.1d67ef4411da33a59ab2.jpg":"90098bd297ba056032e51ae0efef351000a6393aa62ede680c430641ae50c4a3","/static/media/dentist-1.f60485d3ba088fd27f39.jpg":"48853a2cbd177861d76231c1811caeacd3c2dd9f06e65b27d8838929a90bd11c","/static/js/main.98dbbd0f.js":"6cfc4c6d27012c6b53e58d521b554ea5371194e89701239308f8537a94cc07e0","/static/js/main.98dbbd0f.js.map":"78d0928f5a1c9069576549da7b86aac6ae7128850d2e25eea4dbe595b8edec2a"}}
+[debug] [2022-11-10T17:20:46.181Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/667682329524/sites/dentist-review/versions/30f90544667f77a8:populateFiles 200
+[debug] [2022-11-10T17:20:46.182Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/667682329524/sites/dentist-review/versions/30f90544667f77a8:populateFiles {"uploadRequiredHashes":["ba533cb2453d5304ec9d8552b70f6bb66ed1642d7f6115e961318786d445f743","34d25c3a9e7e92e59f3391ab2add64e1ed5e0791a7e2649ebb256ffe6d8584af","6cfc4c6d27012c6b53e58d521b554ea5371194e89701239308f8537a94cc07e0","1e6fa17d482dfaa9756e4e604877dbebaa91cdb8efc41e084d74fb10cbf859ad","78d0928f5a1c9069576549da7b86aac6ae7128850d2e25eea4dbe595b8edec2a","1be19d6d3889d421bcf4f4a7a918f9b75989a103c2ee1558c3a24430b635d983"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files"}
+[debug] [2022-11-10T17:20:46.188Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/ba533cb2453d5304ec9d8552b70f6bb66ed1642d7f6115e961318786d445f743 [none]
+[debug] [2022-11-10T17:20:46.189Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/ba533cb2453d5304ec9d8552b70f6bb66ed1642d7f6115e961318786d445f743 [stream]
+[debug] [2022-11-10T17:20:46.192Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/34d25c3a9e7e92e59f3391ab2add64e1ed5e0791a7e2649ebb256ffe6d8584af [none]
+[debug] [2022-11-10T17:20:46.192Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/34d25c3a9e7e92e59f3391ab2add64e1ed5e0791a7e2649ebb256ffe6d8584af [stream]
+[debug] [2022-11-10T17:20:46.194Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/6cfc4c6d27012c6b53e58d521b554ea5371194e89701239308f8537a94cc07e0 [none]
+[debug] [2022-11-10T17:20:46.194Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/6cfc4c6d27012c6b53e58d521b554ea5371194e89701239308f8537a94cc07e0 [stream]
+[debug] [2022-11-10T17:20:46.196Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/1e6fa17d482dfaa9756e4e604877dbebaa91cdb8efc41e084d74fb10cbf859ad [none]
+[debug] [2022-11-10T17:20:46.196Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/1e6fa17d482dfaa9756e4e604877dbebaa91cdb8efc41e084d74fb10cbf859ad [stream]
+[debug] [2022-11-10T17:20:46.199Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/78d0928f5a1c9069576549da7b86aac6ae7128850d2e25eea4dbe595b8edec2a [none]
+[debug] [2022-11-10T17:20:46.199Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/78d0928f5a1c9069576549da7b86aac6ae7128850d2e25eea4dbe595b8edec2a [stream]
+[debug] [2022-11-10T17:20:46.201Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/1be19d6d3889d421bcf4f4a7a918f9b75989a103c2ee1558c3a24430b635d983 [none]
+[debug] [2022-11-10T17:20:46.201Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/1be19d6d3889d421bcf4f4a7a918f9b75989a103c2ee1558c3a24430b635d983 [stream]
+[debug] [2022-11-10T17:20:46.203Z] [hosting][populate queue][FINAL] {"max":1304,"min":1304,"avg":1304,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1319}
+[debug] [2022-11-10T17:20:46.203Z] [hosting] uploads queued: 6
+[debug] [2022-11-10T17:20:47.959Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/1be19d6d3889d421bcf4f4a7a918f9b75989a103c2ee1558c3a24430b635d983 200
+[debug] [2022-11-10T17:20:47.959Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/1be19d6d3889d421bcf4f4a7a918f9b75989a103c2ee1558c3a24430b635d983 [stream]
+[debug] [2022-11-10T17:20:47.966Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/ba533cb2453d5304ec9d8552b70f6bb66ed1642d7f6115e961318786d445f743 200
+[debug] [2022-11-10T17:20:47.966Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/ba533cb2453d5304ec9d8552b70f6bb66ed1642d7f6115e961318786d445f743 [stream]
+[debug] [2022-11-10T17:20:48.042Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/34d25c3a9e7e92e59f3391ab2add64e1ed5e0791a7e2649ebb256ffe6d8584af 200
+[debug] [2022-11-10T17:20:48.042Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/34d25c3a9e7e92e59f3391ab2add64e1ed5e0791a7e2649ebb256ffe6d8584af [stream]
+[debug] [2022-11-10T17:20:48.375Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/1e6fa17d482dfaa9756e4e604877dbebaa91cdb8efc41e084d74fb10cbf859ad 200
+[debug] [2022-11-10T17:20:48.376Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/1e6fa17d482dfaa9756e4e604877dbebaa91cdb8efc41e084d74fb10cbf859ad [stream]
+[debug] [2022-11-10T17:20:49.662Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/6cfc4c6d27012c6b53e58d521b554ea5371194e89701239308f8537a94cc07e0 200
+[debug] [2022-11-10T17:20:49.663Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/6cfc4c6d27012c6b53e58d521b554ea5371194e89701239308f8537a94cc07e0 [stream]
+[debug] [2022-11-10T17:20:50.023Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/78d0928f5a1c9069576549da7b86aac6ae7128850d2e25eea4dbe595b8edec2a 200
+[debug] [2022-11-10T17:20:50.024Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dentist-review/versions/30f90544667f77a8/files/78d0928f5a1c9069576549da7b86aac6ae7128850d2e25eea4dbe595b8edec2a [stream]
+[debug] [2022-11-10T17:20:50.024Z] [hosting][upload queue][FINAL] {"max":3839,"min":1772,"avg":2487.3333333333335,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":3842}
+[info] +  hosting[dentist-review]: file upload complete 
+[debug] [2022-11-10T17:20:50.027Z] [hosting] deploy completed after 5778ms
+[debug] [2022-11-10T17:20:50.034Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "dentist-review"
+    },
+    "version": "projects/667682329524/sites/dentist-review/versions/30f90544667f77a8"
+  }
+]
+[info] i  hosting[dentist-review]: finalizing version... 
+[debug] [2022-11-10T17:20:50.045Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/versions/30f90544667f77a8 updateMask=status%2Cconfig
+[debug] [2022-11-10T17:20:50.046Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/versions/30f90544667f77a8 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-11-10T17:20:52.626Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/versions/30f90544667f77a8 200
+[debug] [2022-11-10T17:20:52.626Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/versions/30f90544667f77a8 {"name":"projects/667682329524/sites/dentist-review/versions/30f90544667f77a8","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-10T17:20:43.658409Z","createUser":{"email":"templateplanet46@gmail.com"},"finalizeTime":"2022-11-10T17:20:52.320571Z","finalizeUser":{"email":"templateplanet46@gmail.com"}}
+[debug] [2022-11-10T17:20:52.626Z] [hosting] finalized version for dentist-review:[object Object]
+[info] +  hosting[dentist-review]: version finalized 
+[info] i  hosting[dentist-review]: releasing new version... 
+[debug] [2022-11-10T17:20:52.633Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/channels/live/releases versionName=projects%2F667682329524%2Fsites%2Fdentist-review%2Fversions%2F30f90544667f77a8
+[debug] [2022-11-10T17:20:52.633Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/channels/live/releases {}
+[debug] [2022-11-10T17:20:54.333Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/channels/live/releases 200
+[debug] [2022-11-10T17:20:54.334Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dentist-review/channels/live/releases {"name":"projects/667682329524/sites/dentist-review/channels/live/releases/1668100853220191","version":{"name":"projects/667682329524/sites/dentist-review/versions/30f90544667f77a8","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-10T17:20:43.658409Z","createUser":{"email":"templateplanet46@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3oAKlwayQV02Q5uHgey3QLgdXaH9fzv8QryyqX"},"finalizeTime":"2022-11-10T17:20:52.320571Z","finalizeUser":{"email":"templateplanet46@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3oAKlwayQV02Q5uHgey3QLgdXaH9fzv8QryyqX"}},"type":"DEPLOY","releaseTime":"2022-11-10T17:20:53.220191692Z","releaseUser":{"email":"templateplanet46@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3oAKlwayQV02Q5uHgey3QLgdXaH9fzv8QryyqX"}}
+[debug] [2022-11-10T17:20:54.334Z] [hosting] release: {"name":"projects/667682329524/sites/dentist-review/channels/live/releases/1668100853220191","version":{"name":"projects/667682329524/sites/dentist-review/versions/30f90544667f77a8","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-10T17:20:43.658409Z","createUser":{"email":"templateplanet46@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3oAKlwayQV02Q5uHgey3QLgdXaH9fzv8QryyqX"},"finalizeTime":"2022-11-10T17:20:52.320571Z","finalizeUser":{"email":"templateplanet46@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3oAKlwayQV02Q5uHgey3QLgdXaH9fzv8QryyqX"}},"type":"DEPLOY","releaseTime":"2022-11-10T17:20:53.220191692Z","releaseUser":{"email":"templateplanet46@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3oAKlwayQV02Q5uHgey3QLgdXaH9fzv8QryyqX"}}
+[info] +  hosting[dentist-review]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/dentist-review/overview
+[info] Hosting URL: https://dentist-review.web.app
+[debug] [2022-11-10T17:21:03.837Z] Error: Timed out.
+    at Timeout.<anonymous> (C:\Users\Imtiaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.

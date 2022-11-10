@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const ReviewRow = ({ review, handleDelete, handleUpdateUser }) => {
-    const { _id, serviceName,customer, img, text ,service
+    const { _id, serviceName,customer, img, text ,service,lastUpdated
     } = review;
     
     const [reviewservice, setReviewservice] = useState({})
@@ -20,6 +20,7 @@ const ReviewRow = ({ review, handleDelete, handleUpdateUser }) => {
         const newReview = {...reviewservice}
         newReview[field] = value;
         setReviewservice(newReview);
+
     }
     
     return (
@@ -44,20 +45,40 @@ const ReviewRow = ({ review, handleDelete, handleUpdateUser }) => {
                                 reviewservice?.img && 
                                 <img style={{width: '60px'}} src={reviewservice.img} alt="Avatar Tailwind CSS Component" />
                             } 
-                        <div className="text-sm opacity-50">{text}</div>
+                        <div className="text-sm w-72 ">{text}</div>
+                        <div className="text-cyan-500">{ serviceName}</div>
                     </div>
                 </div>
             </td>
             <td>
-                {serviceName}
+                {lastUpdated} 
             </td>
             <th>
-                <button 
-                onClick={() => handleUpdateUser(_id)}
-                className="btn btn-ghost">Update Review</button>
+               
                 <div>
-           
-            <form >
+                <label onClick={() => handleUpdateUser(_id)} htmlFor="my-modal-5" className="btn">Update Review</label>
+
+                    {/* Put this part before </body> tag */}
+                    <input type="checkbox" id="my-modal-5" className="modal-toggle" />
+                    <div className="modal">
+                    <div className="modal-box w-11/12 max-w-5xl">
+                    <form >
+                <input onChange={handleInputChange}  type="text"
+                name='name' placeholder='name' className='my-3 border-2 w-3/4 h-8' required />
+                <br />
+                <input onChange={handleInputChange} type="text"  name='address' placeholder='text' className='my-3 border-2 w-3/4 h-8' />
+                <br />
+                <input onChange={handleInputChange} type="text" bordered name="email" id="" className='my-3 border-2 w-3/4 h-8' placeholder='enter photoURL' required />
+                <br />
+                
+                
+            </form>
+                        <div className="modal-action">
+                        <label onClick={() => handleUpdateUser(_id)}htmlFor="my-modal-5" className="btn">Update?</label>
+                        </div>
+                    </div>
+                    </div>
+            {/* <form >
                 <input onChange={handleInputChange}  type="text"
                 defaultValue={customer}  name='name' placeholder='name' required />
                 <br />
@@ -67,7 +88,7 @@ const ReviewRow = ({ review, handleDelete, handleUpdateUser }) => {
                 <br />
                 
                 
-            </form>
+            </form> */}
         </div>
             </th>
         </tr>

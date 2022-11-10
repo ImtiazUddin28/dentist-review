@@ -45,8 +45,9 @@ const handleUpdateUser = (id) =>{
     .then(res => res.json())
     .then(data => {
         if (data.modifiedCount > 0){
-            alert('user updated')
-            console.log(data);
+            
+            console.log(data)
+            
         }
         
     })
@@ -69,7 +70,7 @@ const handleUpdateUser = (id) =>{
                             <th>
                             </th>
                             <th>Customer Activity</th>
-                            <th>Service Name</th>
+                            <th>review date and time</th>
                             <th>Status</th>
                             <th></th>
                         </tr>

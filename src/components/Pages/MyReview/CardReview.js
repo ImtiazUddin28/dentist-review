@@ -2,7 +2,7 @@ import React from 'react';
 
 const CardReview = ({review}) => {
     
-    const { serviceName,customer, img, text 
+    const {customer, img, text 
     } = review;
     return (
         <div>
@@ -20,9 +20,7 @@ const CardReview = ({review}) => {
                     </div>
                 </div>
             </td>
-            <td>
-                {serviceName}
-            </td>
+        
         </div>
     );
 };
