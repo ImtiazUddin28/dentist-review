@@ -18,14 +18,16 @@ const Service = () => {
     }, []);
 
   
-
-    const handlePlaceOrder = event => {
+    const remaining = reviews.filter(rvw => rvw.service === _id);
+    const handlePlaceReview = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.firstName.value;
         const img = form.photoURL.value;
         const email = user?.email || 'unregistered';
         const text = form.message.value;
+        const lastUpdated = new Date();
+
 
         const review = {
             service: _id,
@@ -33,7 +35,9 @@ const Service = () => {
             customer: name,
             email,
             img,
-            text
+            text,
+            lastUpdated
+
         }
         
         // if(phone.length > 10){
@@ -66,7 +70,7 @@ const Service = () => {
     
     
 }
-    const remaining = reviews.filter(rvw => rvw.service === _id);
+    
     return (
         <div>
             <div className="card card-compact w-full bg-base-100 shadow-xl">
@@ -112,7 +116,7 @@ const Service = () => {
                 </table>
             </div>
             <div className='my-3'>
-                <form onSubmit={handlePlaceOrder}>
+                <form onSubmit={handlePlaceReview}>
                     <h2 className="text-4xl my-3">Please Review about: {title}</h2>
                     
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>

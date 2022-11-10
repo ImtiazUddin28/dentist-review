@@ -29,28 +29,35 @@ const Review = () => {
             })
         }
     }
+//Update section start
 
-    const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/reviews/${id}`, {
-            method: 'PATCH', 
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({status: 'Approved'})
-        })
-        .then(res => res.json())
-        .then(data => {
+
+const handleUpdateUser = (id) =>{
+    
+    // console.log(user);
+    fetch(`http://localhost:5000/reviews/${id}`, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(reviews)
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.modifiedCount > 0){
+            alert('user updated')
             console.log(data);
-            if(data.modifiedCount > 0) {
-                const remaining = reviews.filter(rvw => rvw._id !== id);
-                const approving = reviews.find(rvw => rvw._id === id);
-                approving.status = 'Approved'
+        }
+        
+    })
+}
 
-                const newreviews = [approving, ...remaining];
-                setReviews(newreviews);
-            }
-        })
-    }
+
+
+
+//Update section end
+
+    
 
     return (
         <div>
@@ -73,12 +80,15 @@ const Review = () => {
                                 key={review._id}
                                 review={review}
                                 handleDelete={handleDelete}
-                                handleStatusUpdate={handleStatusUpdate}
+                                handleUpdateUser={handleUpdateUser}
+                               
                             ></ReviewRow>)
                         }
+                        
                     </tbody>
                 </table>
             </div>
+            
         </div>
     );
 };
