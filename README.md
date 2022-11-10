@@ -1,10 +1,10 @@
 ## Project Name:
-    #Dentist Reviews Website
+    Dentist Reviews Website
 ## Project Live link:
    
-   [https://dentist-review.web.app/]https://dentist-review.web.app/)
+   [https://dentist-review.web.app/](https://dentist-review.web.app/)
 ## Most Important Features
-* There are  45 public pages in the site
+* There are 4 public pages in the site
 * There three private page only login can browse these
 * Blog Section Contain  questions answer
 * Email-Password and login systems are integrated
