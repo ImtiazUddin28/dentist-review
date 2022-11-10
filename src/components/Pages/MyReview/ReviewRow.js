@@ -54,7 +54,7 @@ const ReviewRow = ({ review, handleDelete, handleUpdateUser }) => {
             <th>
                 <button 
                 onClick={() => handleUpdateUser(_id)}
-                className="btn btn-ghost">Update</button>
+                className="btn btn-ghost">Update Review</button>
                 <div>
            
             <form >
